@@ -29,6 +29,7 @@ public class Solution {
                 for (Integer integer: integerList){
                     System.out.println(integer);
                 }
+                return;
             }
         }
     }

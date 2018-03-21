@@ -34,7 +34,7 @@ public class Solution {
             if (isNumber(array[i])) {
                 for (int j = i + 1; j < array.length; j++) {
                     if (isNumber(array[j])) {
-                        if (Integer.parseInt(array[j]) > Integer.parseInt(array[i])) {
+                        if (Integer.parseInt(array[j]) > Integer.parseInt(array[maxInteger])) {
                             maxInteger = j;
                         }
                     }
@@ -47,7 +47,7 @@ public class Solution {
             } else {
                 for (int j = i + 1; j < array.length; j++){
                     if (! isNumber(array[j])) {
-                        if (isGreaterThan(array[i], array[j])){
+                        if (isGreaterThan(array[minString], array[j])){
                             minString = j;
                         }
                     }

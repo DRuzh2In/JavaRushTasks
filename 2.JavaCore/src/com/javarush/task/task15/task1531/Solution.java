@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /* 
 Факториал
@@ -23,10 +24,10 @@ public class Solution {
         //add your code here
         if (n < 0)
             return "0";
-        int factorial = 1;
-        for (int i = 1; i < n + 1; i++)
-            factorial *= i;
+        BigInteger f = new BigInteger("1"); // Or BigInteger.ONE
+        for (int i = 2; i <= n; i++)
+            f = f.multiply(BigInteger.valueOf(i));
 
-        return Integer.toString(factorial);
+        return f.toString();
     }
 }
